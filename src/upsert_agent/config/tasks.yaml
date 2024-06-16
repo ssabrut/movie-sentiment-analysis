@@ -1,7 +1,0 @@
-data_loading_task:
-  description: Load data from a CSV file. The dataset is located at {dataset_path}.
-  expected_output: A JSON object representing the data from the CSV file.
-  tool: 
-    - class: [FileReadTool]
-      parameters:
-        file_path: "{dataset_path}"
