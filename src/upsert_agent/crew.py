@@ -3,7 +3,7 @@ from crewai.project import CrewBase, agent, crew, task
 from langchain_groq import ChatGroq
 
 @CrewBase
-class UpsertAgent:
+class UpsertAgent():
     agents_config = 'config/agents.yaml'
     tasks_config = 'config/tasks.yaml'
 

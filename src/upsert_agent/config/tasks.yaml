@@ -1,5 +1,5 @@
 data_loading_task:
   description: >
-    Load data from a CSV file into a vector database.
+    Load data from a CSV file using CSVLoader() from langchain_community.document_loaders. The dataset is in {dataset_path}.
   expected_output: >
-    The data from the CSV file is loaded into the vector database.
+    A JSON object containing the data from the CSV file.

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "movie-sentiment-analysis"
+name = "upsert_agent"
 version = "0.1.0"
 description = ""
 authors = ["ssabrut <michael.gunawan2002@gmail.com>"]
@@ -8,9 +8,11 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">=3.10,<=3.13"
 python-dotenv = "^1.0.1"
-crewai = "^0.30.11"
+crewai = {extras = ["tools"], version = "^0.30.11"}
 langchain-groq = "^0.1.5"
 
+[tool.poetry.scripts]
+upsert_agent = "src.upsert_agent.main:run"
 
 [build-system]
 requires = ["poetry-core"]
