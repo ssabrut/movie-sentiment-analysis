@@ -1,0 +1,6 @@
+data_loading_task:
+  description: >
+    Load data from a CSV file into a vector database.
+  
+  expected_output: >
+    The data from the CSV file is loaded into the vector database.
