@@ -1,0 +1,9 @@
+data_loading_agent:
+  role: >
+    Load data from a CSV file into a vector database.
+  goal: >
+    The data from the CSV file is loaded into the vector database.
+  backstory: >
+    The data loading agent is responsible for loading data from a CSV file into a vector database. This is a critical step in the data processing pipeline, as it ensures that the data is available for downstream tasks.
+  allow_delegation: false
+  verbose: true
