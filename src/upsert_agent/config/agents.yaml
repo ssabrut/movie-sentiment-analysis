@@ -1,7 +1,0 @@
-data_loading_agent:
-  role: Data Loading Agent
-  goal: Load data from a CSV file using FileReadTool() and convert it to JSON format.
-  backstory: >
-    The data loading agent is responsible for converting data from a CSV file into JSON format. This ensures that the data is properly structured and available for subsequent processing steps in the pipeline.
-  allow_delegation: false
-  verbose: true

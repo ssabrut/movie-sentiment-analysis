@@ -1,17 +1,24 @@
+from crewai import Crew, Task
+from crewai_tools import FileReadTool
 from dotenv import load_dotenv
-from upsert_agent.crew import UpsertAgent
 load_dotenv()
 
-# Initialize the tool with a specific CSV file. This setup allows the agent to only search the given CSV file.
+def run():    
+    data_loading_task = Task(
+        description='Load data from a CSV file. The dataset is located at data/IMDB Dataset.csv',
+        expected_output='A JSON object representing the data from the CSV file',
+        agent=data_loading_agent,
+        tools=[FileReadTool()]
+    )
+    
+    crew = Crew(
+        tasks=[data_loading_task],
+        agents=[data_loading_agent],
+        verbose=2
+    )
 
-def run():
-    inputs = {
-        'dataset_path': 'data/IMDB Dataset.csv'
-    }
-
-    UpsertAgent().crew().kickoff(inputs=inputs)
-    # loader = FileReadTool(file_path='data/IMDB Dataset.csv')
-    # print(loader.run())
+    result = crew.kickoff()
+    print(result)
 
 if __name__ == '__main__':
     run()
