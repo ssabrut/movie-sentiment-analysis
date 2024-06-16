@@ -1,5 +1,7 @@
 data_loading_task:
-  description: >
-    Load data from a CSV file using CSVLoader() from langchain_community.document_loaders. The dataset is in {dataset_path}.
-  expected_output: >
-    A JSON object containing the data from the CSV file.
+  description: Load data from a CSV file. The dataset is located at {dataset_path}.
+  expected_output: A JSON object representing the data from the CSV file.
+  tool: 
+    - class: [FileReadTool]
+      parameters:
+        file_path: "{dataset_path}"

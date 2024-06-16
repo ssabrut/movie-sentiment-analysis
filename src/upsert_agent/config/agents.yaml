@@ -1,9 +1,7 @@
 data_loading_agent:
-  role: >
-    Load data from a CSV file into a vector database.
-  goal: >
-    The data from the CSV file is loaded into the vector database.
+  role: Data Loading Agent
+  goal: Load data from a CSV file using FileReadTool() and convert it to JSON format.
   backstory: >
-    The data loading agent is responsible for loading data from a CSV file into a vector database. This is a critical step in the data processing pipeline, as it ensures that the data is available for downstream tasks.
+    The data loading agent is responsible for converting data from a CSV file into JSON format. This ensures that the data is properly structured and available for subsequent processing steps in the pipeline.
   allow_delegation: false
   verbose: true
